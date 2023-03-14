@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.calculator-grid {
+    background-color: black;
+    margin: 20px 450px 50px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100hv;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(80, 79, 79);
+    font-size: 35px;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 0 20px;
+    margin: 7px;
+}
+
+.calculator-grid > button:hover {
+    background-color: white;
+    color: black;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgb(228, 225, 225);
+    font-size: 25px;
+}
+
+.output .current-operand {
+    font-size: 60px;
+}
+
+#divide,
+#minus,
+#times,
+#plus,
+#equal {
+    background-color: orange;
+}
