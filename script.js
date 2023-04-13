@@ -19,7 +19,7 @@ for (let i = 0; i < numbers.length; i++) {
     if (isFirstValue === false) {
       getFirstValue(atr);
     }
-    if (isSecondValue == false) {
+    if (isSecondValue === false) {
       getSecondValue(atr);
     }
   });
